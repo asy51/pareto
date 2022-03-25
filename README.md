@@ -34,12 +34,12 @@ In order to guarantee that a ranking system generates PE solutions, PE-LTR was i
 Model Architecture
 ------------------
 
-As the innovation of PE-LTR is the “pareto step” in which multiple losses are made pareto-efficient by modification of loss weights, all other aspects of the model architecture are flexible as long as the model and loss formulation have gradients. As such, we have implemented a simple dense neural network with a series of linear layers.
+As the innovation of PE-LTR is the "pareto step" in which multiple losses are made pareto-efficient by modification of loss weights, all other aspects of the model architecture are flexible as long as the model and loss formulation have gradients. As such, this study implements a simple dense neural network with a series of linear layers.
 
 Experiments
 -----------
 
-First, we replicated the LTR task in the PE-LTR manuscript, which they distill down as a click prediction (binary classification) problem. Since the primary contribution of the PE-LTR paper is not in fact specific to LTR, a second regression experiment was also performed to assess the utility of the pareto-efficient weight updating procedure on a diversity of tasks.
+First step is the replication of the LTR task in the PE-LTR manuscript, which was distilled down as a click prediction (binary classification) problem. Since the primary contribution of the PE-LTR paper is not in fact specific to LTR, a second regression experiment was also performed to assess the utility of the pareto-efficient weight updating procedure on a diversity of tasks.
 
 ### E-Commerce Learning to Rank
 
@@ -120,13 +120,15 @@ California Housing Dataset Characterization. Distribution represented as median 
 Figures
 =======
 
-Figure 1
+Figure 1.
 
 ![](images/image5.png)
 
 Training and Validation losses of CTR and GMV over epochs in the E-Commerce model
 
-Figure 2.![](images/image7.png)
+Figure 2.
+
+![](images/image7.png)
 
 CTR and GMV loss weights over epochs in the E-Commerce model
 
@@ -145,21 +147,18 @@ CTR and GMV loss weights over epochs in the California Housing model
 Appendix 1
 ==========
 
-![](images/image4.png)![](images/image2.png)
+![](images/image4.png)
+
+![](images/image2.png)
 
 ![](images/image6.png)
-----------------------
 
 ![](images/image1.png)
-----------------------
 
 ![](images/image13.png)
------------------------
 
 ![](images/image3.png)
-----------------------
 
 ![](images/image8.png)
-----------------------
 
 For each of the 8 covariates, two figures were generated: the 2d histogram plot with the outcome value
